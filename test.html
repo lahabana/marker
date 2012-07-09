@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+	<script type="text/javascript" src="marker.js"></script>
+	<link rel="stylesheet" href="default.css" type="text/css"/>
+</head>
+<html>
+	<div class="bing" ></div>
+
+	<script type="text/javascript">
+		$(".bing").marker({title: "graphismes", categories: [{
+				name: "Sequences videos, intros, etc.",
+				mark: 2
+			},{
+				name: "Fluidite",
+				mark: 2
+			},{
+				name: "Qualite des dessins",
+				mark: 3
+			},{
+				name: "Qualite des textures",
+				mark: 2
+			},{
+				name: "Cohérence entre theme et graphisme",
+				mark: 2
+			},{
+				name: "Continuite de la qualite graphique",
+				mark: 1
+			},{
+				name: "Reglages des graphismes",
+				mark: 1
+			},{
+				name: "Details de l'environnement",
+				mark: 2
+		}]});	
+	</script>
+</html>
