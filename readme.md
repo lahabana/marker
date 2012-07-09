@@ -42,5 +42,5 @@ If you suppose you have a div with a class "bing" to render a marker just do:
 
 And the default stylesheet will give:
 	
-![The rendered marker](demo.png)
+![The rendered marker](https://github.com/lahabana/marker/blob/master/demo.png?raw=true)
 
