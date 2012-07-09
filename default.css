@@ -1,0 +1,95 @@
+
+.marker-main {
+	color: #ed8602;
+}
+
+.marker-main  > * {
+	display: inline-block;
+	vertical-align: top;
+}
+
+.marker-title-container {
+	position: relative;
+	background-color: #865f13;
+	-moz-border-top-left-radius: 5px;
+	-moz-border-bottom-left-radius: 5px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	width: 24px;
+}
+
+.marker-title-container > * {
+   -moz-transform: rotate(-90deg) translate(0, 100%);
+   -moz-transform-origin: 0% 100%;
+   -o-transform: rotate(-90deg) translate(0, 100%);
+   -o-transform-origin: 0% 100%;
+   -webkit-transform: rotate(-90deg) translate(0, 100%);
+   -webkit-transform-origin: 0% 100%;
+   transform: rotate(-90deg) translate(0, 100%);
+   transform-origin: 0% 100%;
+}
+
+.marker-cat-container {
+	margin: 0 0 0 5px;
+	list-style: none;
+	padding: 0;
+}
+
+.marker-cat {
+	margin-top: 5px;
+	padding: auto;
+	background-color: #bdb8a8;
+	-moz-border-top-right-radius: 5px;
+	-moz-border-bottom-right-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.marker-cat-container > :first-child {
+	margin-top: 0;
+}
+
+.marker-cat > * {
+	display: inline-block;
+	margin: 5px;
+	vertical-align: middle;
+}
+
+
+.marker-title {
+	position: absolute;
+	bottom: 5px;
+	left: 2px;
+	text-align: center;
+}
+
+.marker-total, .marker-cat-mark {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	text-align: center;
+	width: 20px;
+}
+
+.marker-total {
+	position: absolute;
+	top: 5px;
+	left: 3px;
+	color: white;
+	background-color: #ed8602;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.marker-cat-mark {
+	background-color: #865f13;
+	float: right;
+}
+
+.marker-cat-name {
+}
