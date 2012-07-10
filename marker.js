@@ -13,17 +13,24 @@
 		
 		var catMainContainer = $("<ul/>").addClass(data.classMainCatContainer);
 		// We create the html for each category
+		var totalCoef = 0;
 		$.each(data.categories, function(idx, val) {
 			var catContainer = $("<li>").addClass(data.classCatContainer);
 			$(catContainer).append($("<div>" + val.name + "</div>").addClass(data.classCatTitle));
 			$(catContainer).append($("<div>" + val.mark + "</div>").addClass(data.classMark));
 			$(catMainContainer).append(catContainer);
-			data.total += val.mark;
+			if (val.coef) {
+				data.total += val.mark * val.coef;
+				totalCoef += val.coef;
+			} else {
+				data.total += val.mark;
+				totalCoef += 1;
+			}
 		});
 		$(that).append(catMainContainer);
 
 		// We add the total score
-		$(titleContainer).append($("<div>" + data.total + "</div>").addClass(data.classTotal));
+		$(titleContainer).append($("<div>" + data.total / totalCoef + "</div>").addClass(data.classTotal));
 		// This is to put the left bar to the size of the right bar
 		var wantedHeight = $(catMainContainer).height();
 		$(titleContainer).height(wantedHeight);
@@ -39,7 +46,7 @@
 	        	if (!$(this).data('marker')) {
 					$(this).data('marker', $.extend({
 						title: "",
-						categories: [],// each category is a json like: {name: "js", mark: 4}
+						categories: [],// each category is a json like: {name: "js", mark: 4, coef: 3}
 						classMain: "marker-main", // class added to the main element
 						classTitle: "marker-title", // class of the element that contains the text
 						classTotal: "marker-total", // class of the element that contains the total
