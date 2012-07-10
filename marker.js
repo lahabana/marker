@@ -7,7 +7,8 @@
 		$(that).addClass(data.classMain);
 
 		var titleContainer = $("<div>").addClass(data.classTitleContainer);
-		$(titleContainer).append($("<div>"+ data.title + "</div>").addClass(data.classTitle));
+		var title = $("<div>"+ data.title + "</div>").addClass(data.classTitle);
+		$(titleContainer).append(title);
 		$(that).append(titleContainer);
 		
 		var catMainContainer = $("<ul/>").addClass(data.classMainCatContainer);
@@ -24,7 +25,9 @@
 		// We add the total score
 		$(titleContainer).append($("<div>" + data.total + "</div>").addClass(data.classTotal));
 		// This is to put the left bar to the size of the right bar
-		$(titleContainer).height($(catMainContainer).height());
+		var wantedHeight = $(catMainContainer).height();
+		$(titleContainer).height(wantedHeight);
+		$(title).width(wantedHeight);
 	};
 
 	var methods = {
