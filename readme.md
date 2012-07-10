@@ -10,16 +10,18 @@ jQuery
 
 Syntax
 ========
-The only parameters are the title and the an array of categories and their mark.
+The only parameters are the title and an array of categories with their mark, their name and if necessary their coefficient.
 
 If you suppose you have a div with a class "bing" to render a marker just do:
 
 	$(".bing").marker({title: "graphismes", categories: [{
 				name: "Sequences videos, intros, etc.",
-				mark: 2
+				mark: 2,
+				coef: 4
 			},{
 				name: "Fluidite",
-				mark: 2
+				mark: 2,
+				coef: 2
 			},{
 				name: "Qualite des dessins",
 				mark: 3
