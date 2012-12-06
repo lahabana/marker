@@ -3,6 +3,11 @@ Marker
 
 This is a simple jQuery plug-in to create cool looking markers
 
+TODO - Notice
+--------
+Change it to a jquery-ui widget and add tests
+
+
 Dependency
 --------
 
